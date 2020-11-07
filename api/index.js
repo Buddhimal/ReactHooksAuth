@@ -22,3 +22,7 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
     if (err) throw err;
     console.log("MongoDB Connection Established!")
 });
+
+//set up routes
+
+app.use("/users",require("./routes/userRouter"))
